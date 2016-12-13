@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TERA Universe</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Réglages</string>
+    <string name="info_dev">Développé par Sanoyan JAYAKUMAR et Johnathan NADARAJAH</string>
+    <string name="good_bye">Au revoir !</string>
+    <string name="cinema_showtimes">Scéances des films</string>
+    <string name="facebook_tera">Page Facebook de TERA Universe</string>
+</resources>
