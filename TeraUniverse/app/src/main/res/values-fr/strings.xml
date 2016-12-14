@@ -4,7 +4,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="title_activity_settings">Réglages</string>
+    <string name="title_activity_fb">TeraU - Média</string>
     <string name="action_settings">Réglages</string>
     <string name="action_help">Aide</string>
     <string name="info_dev">Développé par Sanoyan JEYAKUMAR et Johnathan NADARAJAH</string>
