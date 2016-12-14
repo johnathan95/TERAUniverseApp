@@ -24,35 +24,45 @@
         android:id="@+id/textClock"
         android:layout_marginLeft="94dp"
         android:layout_marginStart="94dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_camera"
+        android:id="@+id/buttonInsta"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/buttonCine"
+        android:layout_alignLeft="@+id/buttonCine"
+        android:layout_alignStart="@+id/buttonCine" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_sync_black_24dp"
+        android:id="@+id/buttonImage"
+        android:layout_alignBottom="@+id/buttonInsta"
+        android:layout_alignLeft="@+id/buttonMaps"
+        android:layout_alignStart="@+id/buttonMaps"
+        android:layout_alignTop="@+id/buttonInsta"
+        android:layout_alignRight="@+id/buttonMaps"
+        android:layout_alignEnd="@+id/buttonMaps" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_menu_slideshow"
-        android:id="@+id/imageButton3"
+        android:id="@+id/buttonMaps"
         android:elevation="0dp"
-        android:layout_alignTop="@+id/buttonCine"
+        android:layout_below="@+id/buttonFB"
         android:layout_toRightOf="@+id/buttonFB"
         android:layout_toEndOf="@+id/buttonFB" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_camera"
-        android:id="@+id/imageButton4"
-        android:layout_marginTop="33dp"
-        android:layout_alignTop="@+id/imageButton3"
-        android:layout_alignLeft="@+id/buttonFB"
-        android:layout_alignStart="@+id/buttonFB" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/btn_fb"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="74dp"
         android:id="@+id/buttonFB"
         style="@android:style/Widget.Holo.Light.ImageButton"
         android:background="@drawable/btn_fb"
@@ -66,8 +76,6 @@
         android:id="@+id/buttonCine"
         android:layout_below="@+id/buttonFB"
         android:layout_toLeftOf="@+id/buttonFB"
-        android:layout_toStartOf="@+id/buttonFB"
-        android:layout_marginRight="19dp"
-        android:layout_marginEnd="19dp" />
+        android:layout_toStartOf="@+id/buttonFB" />
 
 </RelativeLayout>
