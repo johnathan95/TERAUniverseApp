@@ -1,9 +1,11 @@
-package com.example.johna.terauniverse;
+package com.example.johna.terauniverse.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.webkit.WebView;
+
+import com.example.johna.terauniverse.R;
 
 public class FBActivity extends AppCompatActivity {
     private WebView myWebView;

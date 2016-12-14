@@ -1,4 +1,4 @@
-package com.example.johna.terauniverse;
+package com.example.johna.terauniverse.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
