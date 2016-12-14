@@ -14,6 +14,11 @@
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.FBActivity" />
         <activity
@@ -24,22 +29,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
         </activity>
-        <activity
-            android:name=".activity.CineActivity"
-            android:label="@string/title_activity_cine"
-            android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activity.GenresActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
-        </activity>
-        <activity android:name=".activity.GenresActivity">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

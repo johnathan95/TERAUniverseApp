@@ -1,10 +1,14 @@
 package com.example.johna.terauniverse.activity;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,18 +18,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.johna.terauniverse.R;
+import com.example.johna.terauniverse.activity.FBActivity;
+import com.example.johna.terauniverse.activity.GenresActivity;
+import com.example.johna.terauniverse.activity.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageButton btnFB,btnCine;
+    private ImageButton btnFB,btnCine,btnImage,btnInsta, btnMaps;
 
     public final static String EXTRA_LAUNCHES = "EXTRA_LAUNCHES";
     public final static String EXTRA_SIZE = "EXTRA_SIZE";
+
+    private final static int EXIT_DIALOG = 1;
+    private final static int ABOUT_DIALOG = 2;
+    private final static int HELP_DIALOG = 3;
 
     public final static int NUMBER_OF_LAUNCHES_REQUEST = 1;
     public final static int SIZE_REQUEST = 2;
@@ -37,6 +50,10 @@ public class MainActivity extends AppCompatActivity
     private int size = LARGE_SIZE;
     private int launches = 0;
 
+    private AlertDialog exitDialog;
+    private AlertDialog aboutDialog;
+    private AlertDialog helpDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +62,10 @@ public class MainActivity extends AppCompatActivity
 
         btnFB = (ImageButton) findViewById(R.id.buttonFB);
         btnCine = (ImageButton) findViewById(R.id.buttonCine);
-        //btnFB.setBackgroundResource(R.drawable.go_anim);
-        //AnimationDrawable goAnimation = (AnimationDrawable) btnRedirect.getBackground();
-        //goAnimation.start();
+        btnImage = (ImageButton) findViewById(R.id.buttonImage);
+        btnInsta = (ImageButton) findViewById(R.id.buttonInsta);
+        btnMaps = (ImageButton) findViewById(R.id.buttonMaps);
+
         btnFB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
@@ -72,8 +90,36 @@ public class MainActivity extends AppCompatActivity
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
 
-                Intent intent = new Intent(MainActivity.this, CineActivity.class);
+                Intent intent = new Intent(MainActivity.this, GenresActivity.class);
                 startActivity(intent);
+            }
+        });
+        btnImage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                CharSequence text = "Image view downloader";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+                // Intent intent = new Intent(MainActivity.this, ImageActivity.class);
+                // startActivity(intent);
+            }
+        });
+        btnMaps.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                CharSequence text = "Service Maps";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+                //Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                //startActivity(intent);
             }
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -93,8 +139,12 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 // Perform action on click
                 Context context = getApplicationContext();
-                //CharSequence text = R.string.good_bye;
                 int duration = Toast.LENGTH_SHORT;
+
+                Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                homeIntent.addCategory(Intent.CATEGORY_HOME);
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
 
                 Toast toast = Toast.makeText(context, R.string.good_bye, duration);
                 toast.show();
@@ -129,19 +179,73 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    protected Dialog onCreateDialog(int id) {
+        AlertDialog.Builder builder;
+        switch (id) {
+            case EXIT_DIALOG:
+                builder = new AlertDialog.Builder(this);
+                builder.setTitle("Exit");
+                builder.setIcon(R.drawable.logo0);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        exitDialog.dismiss();
+                    }
+                });
+                exitDialog = builder.create();
+                return exitDialog;
+            case HELP_DIALOG:
+                ImageView imageHelp = new ImageView(this);
+                imageHelp.setImageResource(R.drawable.logo0);
+                builder = new AlertDialog.Builder(this);
+                builder.setTitle(R.string.help);
+                //  builder.setMessage(R.string.long_help);
+                builder.setIcon(R.drawable.logo0);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        helpDialog.dismiss();
+                    }
+                }).
+                        setView(imageHelp);
+                helpDialog = builder.create();
+                return helpDialog;
+            case ABOUT_DIALOG:
+                ImageView imageAbout = new ImageView(this);
+                imageAbout.setImageResource(R.drawable.logo0);
+                builder = new AlertDialog.Builder(this);
+                // builder.setTitle(R.string.about);
+                // builder.setIcon(R.drawable.logo_app);
+                // builder.setMessage(R.string.long_about);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        aboutDialog.dismiss();
+                    }
+                }).setView(imageAbout);
+                aboutDialog = builder.create();
+                return aboutDialog;
+            default:
+                return null;
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
-            //return true;
+        switch (item.getItemId()) {
+            case R.id.action_help:
+                showDialog(HELP_DIALOG);
+                return true;
+            case R.id.action_settings:
+                //Intent intent = new Intent(this, SettingsActivity.class);
+                //intent.putExtra(EXTRA_SIZE, size);
+                //startActivityForResult(intent, SIZE_REQUEST);
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -164,6 +268,7 @@ public class MainActivity extends AppCompatActivity
             toast.show();
             Intent intent = new Intent(MainActivity.this, FBActivity.class);
             startActivity(intent);
+            System.out.println("TeraU fb page redirection ok");
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

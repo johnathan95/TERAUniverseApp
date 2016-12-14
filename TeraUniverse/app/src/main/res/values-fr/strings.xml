@@ -6,8 +6,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Réglages</string>
+    <string name="action_help">Aide</string>
     <string name="info_dev">Développé par Sanoyan JEYAKUMAR et Johnathan NADARAJAH</string>
     <string name="good_bye">Au revoir !</string>
     <string name="cinema_showtimes">Scéances des films</string>
     <string name="facebook_tera">Page Facebook de TERA Universe</string>
+    <string name="ok">ok</string>
+    <string name="help">Aide</string>
 </resources>
