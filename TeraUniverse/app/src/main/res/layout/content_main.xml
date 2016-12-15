@@ -11,7 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.johna.terauniverse.activity.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/splash_app4">
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,24 +30,34 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_camera"
+        app:srcCompat="@drawable/btn_insta"
         android:id="@+id/buttonInsta"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/buttonCine"
         android:layout_alignLeft="@+id/buttonCine"
-        android:layout_alignStart="@+id/buttonCine" />
+        android:layout_alignStart="@+id/buttonCine"
+        android:background="@drawable/btn_insta" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_sync_black_24dp"
         android:id="@+id/buttonImage"
-        android:layout_alignBottom="@+id/buttonInsta"
-        android:layout_alignLeft="@+id/buttonMaps"
-        android:layout_alignStart="@+id/buttonMaps"
-        android:layout_alignTop="@+id/buttonInsta"
-        android:layout_alignRight="@+id/buttonMaps"
-        android:layout_alignEnd="@+id/buttonMaps" />
+        android:layout_below="@+id/buttonTwitter"
+        android:layout_alignLeft="@+id/buttonTwitter"
+        android:layout_alignStart="@+id/buttonTwitter" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_twitter"
+        android:id="@+id/buttonTwitter"
+        android:background="@drawable/btn_twitter"
+        android:layout_below="@+id/buttonMaps"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -54,28 +65,50 @@
         app:srcCompat="@drawable/ic_menu_slideshow"
         android:id="@+id/buttonMaps"
         android:elevation="0dp"
-        android:layout_below="@+id/buttonFB"
-        android:layout_toRightOf="@+id/buttonFB"
-        android:layout_toEndOf="@+id/buttonFB" />
+        android:layout_marginTop="38dp"
+        android:layout_alignTop="@+id/buttonFB"
+        android:layout_alignRight="@+id/buttonImage"
+        android:layout_alignEnd="@+id/buttonImage"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_movie"
+        android:id="@+id/buttonCine"
+        android:background="@drawable/btn_movie"
+        android:layout_alignTop="@+id/buttonMaps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_web"
+        android:id="@+id/buttonWeb"
+        android:background="@drawable/btn_web"
+        android:layout_below="@+id/buttonInsta"
+        android:layout_alignRight="@+id/buttonFB"
+        android:layout_alignEnd="@+id/buttonFB"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="14dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/btn_fb"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="82dp"
         android:id="@+id/buttonFB"
         style="@android:style/Widget.Holo.Light.ImageButton"
         android:background="@drawable/btn_fb"
         android:layout_below="@+id/textClock"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_send"
-        android:id="@+id/buttonCine"
-        android:layout_below="@+id/buttonFB"
-        android:layout_toLeftOf="@+id/buttonFB"
-        android:layout_toStartOf="@+id/buttonFB" />
+        android:layout_alignLeft="@+id/textClock"
+        android:layout_alignStart="@+id/textClock"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
 
 </RelativeLayout>

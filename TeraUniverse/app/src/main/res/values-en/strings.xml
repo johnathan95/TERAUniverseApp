@@ -11,7 +11,11 @@
     <string name="info_dev">Developed by Sanoyan JEYAKUMAR and Johnathan NADARAJAH</string>
     <string name="good_bye">Good bye !</string>
     <string name="cinema_showtimes">Cinema Showtimes</string>
+    <string name="movies_tera">Movies details</string>
     <string name="facebook_tera">TERA Universe Facebook page</string>
+    <string name="web_tera">TERA Universe Website</string>
+    <string name="twitter_tera">TERA Universe Twitter page</string>
+    <string name="insta_tera">TERA Universe Instagram</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -85,4 +89,11 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="ok">ok</string>
     <string name="help">Help</string>
+
+    <string name="m_facebook">Facebook</string>
+    <string name="m_movie">Movies details</string>
+    <string name="m_instagram">Instagram</string>
+    <string name="m_twitter">Twitter</string>
+    <string name="m_web">Website</string>
+    <string name="m_settings">Settings</string>
 </resources>

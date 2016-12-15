@@ -12,7 +12,10 @@
     <string name="title_activity_fb">TeraU - Media</string>
     <string name="cinema_showtimes">Cinema Showtimes</string>
     <string name="facebook_tera">TERA Universe Facebook page</string>
-
+    <string name="movies_tera">Movies details</string>
+    <string name="web_tera">TERA Universe Website</string>
+    <string name="insta_tera">TERA Universe Instagram</string>
+    <string name="twitter_tera">TERA Universe Twitter page</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -87,4 +90,11 @@
     <string name="title_activity_cine">Cinema Showtimes</string>
     <string name="ok">ok</string>
     <string name="help">Help</string>
+
+    <string name="m_facebook">Facebook</string>
+    <string name="m_movie">Movies details</string>
+    <string name="m_instagram">Instagram</string>
+    <string name="m_twitter">Twitter</string>
+    <string name="m_web">Website</string>
+    <string name="m_settings">Settings</string>
 </resources>

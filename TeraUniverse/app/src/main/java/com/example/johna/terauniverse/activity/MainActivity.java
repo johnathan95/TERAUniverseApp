@@ -31,10 +31,16 @@ import com.example.johna.terauniverse.activity.SettingsActivity;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageButton btnFB,btnCine,btnImage,btnInsta, btnMaps;
+    private ImageButton btnFB,btnCine,btnImage,btnInsta,btnMaps,btnWeb, btnTwitter;
 
     public final static String EXTRA_LAUNCHES = "EXTRA_LAUNCHES";
     public final static String EXTRA_SIZE = "EXTRA_SIZE";
+    public final static String EXTRA_TERA = "EXTRA_TERA";
+
+    public final static int TERA_FB = 1;
+    public final static int TERA_INSTA = 2;
+    public final static int TERA_WEB = 3;
+    public final static int TERA_TWITTER = 4;
 
     private final static int EXIT_DIALOG = 1;
     private final static int ABOUT_DIALOG = 2;
@@ -65,18 +71,62 @@ public class MainActivity extends AppCompatActivity
         btnImage = (ImageButton) findViewById(R.id.buttonImage);
         btnInsta = (ImageButton) findViewById(R.id.buttonInsta);
         btnMaps = (ImageButton) findViewById(R.id.buttonMaps);
+        btnWeb = (ImageButton) findViewById(R.id.buttonWeb);
+        btnTwitter = (ImageButton) findViewById(R.id.buttonTwitter);
 
         btnFB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
                 Context context = getApplicationContext();
-                CharSequence text = "TERA Universe Facebook Page";
                 int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, text, duration);
+                Toast toast = Toast.makeText(context, R.string.facebook_tera, duration);
                 toast.show();
 
                 Intent intent = new Intent(MainActivity.this, FBActivity.class);
+                intent.putExtra(EXTRA_TERA, TERA_FB);
+                startActivity(intent);
+            }
+        });
+        btnInsta.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, R.string.insta_tera, duration);
+                toast.show();
+
+                Intent intent = new Intent(MainActivity.this, FBActivity.class);
+                intent.putExtra(EXTRA_TERA, TERA_INSTA);
+                startActivity(intent);
+            }
+        });
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, R.string.web_tera, duration);
+                toast.show();
+
+                Intent intent = new Intent(MainActivity.this, FBActivity.class);
+                intent.putExtra(EXTRA_TERA, TERA_WEB);
+                startActivity(intent);
+            }
+        });
+        btnTwitter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, R.string.twitter_tera, duration);
+                toast.show();
+
+                Intent intent = new Intent(MainActivity.this, FBActivity.class);
+                intent.putExtra(EXTRA_TERA, TERA_TWITTER);
                 startActivity(intent);
             }
         });
@@ -84,10 +134,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 // Perform action on click
                 Context context = getApplicationContext();
-                CharSequence text = "Cinema Showtimes";
                 int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, text, duration);
+                Toast toast = Toast.makeText(context,R.string.movies_tera, duration);
                 toast.show();
 
                 Intent intent = new Intent(MainActivity.this, GenresActivity.class);
@@ -255,25 +304,34 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_facebook) {
+        if (id == R.id.nav_facebook) {
             Context context = getApplicationContext();
             CharSequence text = "TERA Universe Facebook Page";
             int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
+            Toast toast = Toast.makeText(context, R.string.facebook_tera, duration);
             toast.show();
+
             Intent intent = new Intent(MainActivity.this, FBActivity.class);
+            intent.putExtra(EXTRA_TERA, TERA_INSTA);
             startActivity(intent);
             System.out.println("TeraU fb page redirection ok");
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_movie) {
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, R.string.movies_tera, duration);
+            toast.show();
 
+            Intent intent = new Intent(MainActivity.this, GenresActivity.class);
+            startActivity(intent);
+            System.out.println("TeraU movie details page redirection ok");
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_help) {
 
         }
 

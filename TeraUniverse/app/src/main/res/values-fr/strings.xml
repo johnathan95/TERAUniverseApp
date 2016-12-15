@@ -11,7 +11,18 @@
     <string name="info_dev">Développé par Sanoyan JEYAKUMAR et Johnathan NADARAJAH</string>
     <string name="good_bye">Au revoir !</string>
     <string name="cinema_showtimes">Scéances des films</string>
+    <string name="insta_tera">Page instagram TERA Universe</string>
     <string name="facebook_tera">Page Facebook de TERA Universe</string>
+    <string name="web_tera">Site internet de TERA Universe</string>
+    <string name="twitter_tera">Page Twitter de TERA Universe</string>
+    <string name="movies_tera">Détails de films</string>
     <string name="ok">ok</string>
     <string name="help">Aide</string>
+
+    <string name="m_facebook">Facebook</string>
+    <string name="m_movie">Détails de films</string>
+    <string name="m_instagram">Instagram</string>
+    <string name="m_twitter">Twitter</string>
+    <string name="m_web">Site Web</string>
+    <string name="m_settings">Réglages</string>
 </resources>
