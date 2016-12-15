@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FBActivity"
+        <activity
+            android:name=".activity.FBActivity"
             android:label="@string/title_activity_fb"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -39,6 +40,11 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
+        </activity>
+        <activity android:name=".activity.MoviesByGenreActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.johna.terauniverse.activity.GenresActivity" />
         </activity>
     </application>
 

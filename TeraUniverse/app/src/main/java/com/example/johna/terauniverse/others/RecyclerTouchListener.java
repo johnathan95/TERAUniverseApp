@@ -1,12 +1,10 @@
-package com.example.johna.terauniverse.adapter;
+package com.example.johna.terauniverse.others;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-
-import com.example.johna.terauniverse.activity.MainActivity;
 
 /**
  * Created by Sanoyan on 14/12/2016.
