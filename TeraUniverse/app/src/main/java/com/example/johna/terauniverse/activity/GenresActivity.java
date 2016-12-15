@@ -1,21 +1,18 @@
 package com.example.johna.terauniverse.activity;
 
-import android.nfc.Tag;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.johna.terauniverse.R;
-import com.example.johna.terauniverse.adapter.ClickListener;
-import com.example.johna.terauniverse.adapter.DividerItemDecoration;
+import com.example.johna.terauniverse.others.ClickListener;
+import com.example.johna.terauniverse.others.DividerItemDecoration;
 import com.example.johna.terauniverse.adapter.GenresAdapter;
-import com.example.johna.terauniverse.adapter.RecyclerTouchListener;
+import com.example.johna.terauniverse.others.RecyclerTouchListener;
 import com.example.johna.terauniverse.model.Genre;
 import com.example.johna.terauniverse.model.GenreResponse;
 import com.example.johna.terauniverse.rest.ApiClient;
@@ -50,14 +47,16 @@ public class GenresActivity extends AppCompatActivity {
             public void onResponse(Call<GenreResponse> call, Response<GenreResponse> response) {
                 int statusCode = response.code();
                 final List<Genre> genres = response.body().getGenres();
-                //recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
                 recyclerView.setAdapter(new GenresAdapter(genres, R.layout.list_item_genre, getApplicationContext()));
                 recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext()));
                 recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
                     @Override
                     public void onClick(View view, int position) {
                         Genre genre = genres.get(position);
-                        Toast.makeText(getApplicationContext(), genre.getId() + "", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(GenresActivity.this, MoviesByGenreActivity.class);
+                        i.putExtra("id_genre", genre.getId());
+                        i.putExtra("genre_name", genre.getName());
+                        startActivity(i);
                     }
 
                     @Override
