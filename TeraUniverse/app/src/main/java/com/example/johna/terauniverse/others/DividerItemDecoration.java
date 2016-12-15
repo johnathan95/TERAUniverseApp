@@ -1,4 +1,4 @@
-package com.example.johna.terauniverse.adapter;
+package com.example.johna.terauniverse.others;
 
 import android.content.Context;
 import android.content.res.TypedArray;
