@@ -31,7 +31,7 @@ import com.example.johna.terauniverse.activity.SettingsActivity;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageButton btnFB,btnCine,btnImage,btnInsta,btnMaps,btnWeb, btnTwitter;
+    private ImageButton btnFB,btnCine,btnDownload,btnInsta,btnMaps,btnWeb, btnTwitter;
 
     public final static String EXTRA_LAUNCHES = "EXTRA_LAUNCHES";
     public final static String EXTRA_SIZE = "EXTRA_SIZE";
@@ -68,11 +68,23 @@ public class MainActivity extends AppCompatActivity
 
         btnFB = (ImageButton) findViewById(R.id.buttonFB);
         btnCine = (ImageButton) findViewById(R.id.buttonCine);
-        btnImage = (ImageButton) findViewById(R.id.buttonImage);
+        btnDownload = (ImageButton) findViewById(R.id.buttonDownload);
         btnInsta = (ImageButton) findViewById(R.id.buttonInsta);
         btnMaps = (ImageButton) findViewById(R.id.buttonMaps);
         btnWeb = (ImageButton) findViewById(R.id.buttonWeb);
         btnTwitter = (ImageButton) findViewById(R.id.buttonTwitter);
+
+        btnDownload.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+
+                Toast.makeText(context, R.string.download_tera, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnFB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -141,20 +153,6 @@ public class MainActivity extends AppCompatActivity
 
                 Intent intent = new Intent(MainActivity.this, GenresActivity.class);
                 startActivity(intent);
-            }
-        });
-        btnImage.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                Context context = getApplicationContext();
-                CharSequence text = "Image view downloader";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-                // Intent intent = new Intent(MainActivity.this, ImageActivity.class);
-                // startActivity(intent);
             }
         });
         btnMaps.setOnClickListener(new View.OnClickListener() {

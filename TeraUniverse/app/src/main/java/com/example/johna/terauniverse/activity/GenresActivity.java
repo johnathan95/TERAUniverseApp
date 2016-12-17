@@ -69,7 +69,6 @@ public class GenresActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GenreResponse> call, Throwable t) {
-
             }
         });
     }

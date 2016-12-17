@@ -16,6 +16,7 @@
     <string name="web_tera">Site internet de TERA Universe</string>
     <string name="twitter_tera">Page Twitter de TERA Universe</string>
     <string name="movies_tera">Détails de films</string>
+    <string name="download_tera">Page de téléchargements</string>
     <string name="ok">ok</string>
     <string name="help">Aide</string>
 
@@ -25,4 +26,5 @@
     <string name="m_twitter">Twitter</string>
     <string name="m_web">Site Web</string>
     <string name="m_settings">Réglages</string>
+    <string name="download_pdf">Téléchargement du PDF</string>
 </resources>

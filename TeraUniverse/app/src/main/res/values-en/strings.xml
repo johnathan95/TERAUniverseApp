@@ -16,6 +16,7 @@
     <string name="web_tera">TERA Universe Website</string>
     <string name="twitter_tera">TERA Universe Twitter page</string>
     <string name="insta_tera">TERA Universe Instagram</string>
+    <string name="download_tera">TERA Download Page</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -96,4 +97,5 @@
     <string name="m_twitter">Twitter</string>
     <string name="m_web">Website</string>
     <string name="m_settings">Settings</string>
+    <string name="download_pdf">Download the PDF</string>
 </resources>

@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_sync_black_24dp"
-        android:id="@+id/buttonImage"
+        android:id="@+id/buttonDownload"
         android:layout_below="@+id/buttonTwitter"
         android:layout_alignLeft="@+id/buttonTwitter"
         android:layout_alignStart="@+id/buttonTwitter" />
@@ -67,8 +67,8 @@
         android:elevation="0dp"
         android:layout_marginTop="38dp"
         android:layout_alignTop="@+id/buttonFB"
-        android:layout_alignRight="@+id/buttonImage"
-        android:layout_alignEnd="@+id/buttonImage"
+        android:layout_alignRight="@+id/buttonDownload"
+        android:layout_alignEnd="@+id/buttonDownload"
         android:layout_marginRight="35dp"
         android:layout_marginEnd="35dp" />
 
