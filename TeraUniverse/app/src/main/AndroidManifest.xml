@@ -17,8 +17,10 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.FBActivity"
@@ -49,12 +51,15 @@
         <activity
             android:name=".activity.TabbedActivity"
             android:label="@string/title_activity_tabbed"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.DownloadActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
-
+        </activity>
+        <activity
+            android:name=".activity.NotesActivity"
+            android:label="@string/notes">
         </activity>
     </application>
 

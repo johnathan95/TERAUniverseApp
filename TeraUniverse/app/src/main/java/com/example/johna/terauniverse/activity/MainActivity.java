@@ -4,9 +4,11 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.View;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.println("Activity created");
+
 
         btnFB = (ImageButton) findViewById(R.id.buttonFB);
         btnCine = (ImageButton) findViewById(R.id.buttonCine);
@@ -327,8 +330,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_share) {
-
+        } else if (id == R.id.shared_pref) {
+            Intent intent = new Intent(MainActivity.this, NotesActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_help) {
 
         }

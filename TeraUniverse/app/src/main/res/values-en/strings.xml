@@ -98,4 +98,9 @@
     <string name="m_web">Website</string>
     <string name="m_settings">Settings</string>
     <string name="download_pdf">Download the PDF</string>
+    <string name="type_note">Type notes</string>
+    <string name="notes">Notes</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="shared_preferences">Shared Preferences</string>
 </resources>

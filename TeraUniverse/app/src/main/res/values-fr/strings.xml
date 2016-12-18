@@ -27,4 +27,9 @@
     <string name="m_web">Site Web</string>
     <string name="m_settings">Réglages</string>
     <string name="download_pdf">Téléchargement du PDF</string>
+    <string name="type_note">Saisir une note</string>
+    <string name="notes">Notes</string>
+    <string name="save">Sauvegarder</string>
+    <string name="saved">Sauvegardé</string>
+    <string name="shared_preferences">Préférences Utilisateurs</string>
 </resources>
