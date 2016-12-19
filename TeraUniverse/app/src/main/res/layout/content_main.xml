@@ -14,19 +14,6 @@
     tools:showIn="@layout/app_bar_main"
     android:background="@drawable/splash_app4">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:layout_marginLeft="94dp"
-        android:layout_marginStart="94dp"
-        android:layout_alignParentTop="true" />
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,40 +24,6 @@
         android:layout_alignLeft="@+id/buttonCine"
         android:layout_alignStart="@+id/buttonCine"
         android:background="@drawable/btn_insta" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_sync_black_24dp"
-        android:id="@+id/buttonDownload"
-        android:layout_below="@+id/buttonTwitter"
-        android:layout_alignLeft="@+id/buttonTwitter"
-        android:layout_alignStart="@+id/buttonTwitter" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/btn_twitter"
-        android:id="@+id/buttonTwitter"
-        android:background="@drawable/btn_twitter"
-        android:layout_below="@+id/buttonMaps"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="22dp"
-        android:layout_marginEnd="22dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_slideshow"
-        android:id="@+id/buttonMaps"
-        android:elevation="0dp"
-        android:layout_marginTop="38dp"
-        android:layout_alignTop="@+id/buttonFB"
-        android:layout_alignRight="@+id/buttonDownload"
-        android:layout_alignEnd="@+id/buttonDownload"
-        android:layout_marginRight="35dp"
-        android:layout_marginEnd="35dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -87,28 +40,81 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/btn_web"
-        android:id="@+id/buttonWeb"
-        android:background="@drawable/btn_web"
-        android:layout_below="@+id/buttonInsta"
-        android:layout_alignRight="@+id/buttonFB"
-        android:layout_alignEnd="@+id/buttonFB"
-        android:layout_marginRight="19dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginTop="14dp" />
+        app:srcCompat="@drawable/btn_fb"
+        android:layout_marginTop="70dp"
+        android:id="@+id/buttonFB"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:background="@drawable/btn_fb"
+        android:layout_below="@+id/home_msg"
+        android:layout_toRightOf="@+id/buttonCine"
+        android:layout_toEndOf="@+id/buttonCine"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_msg_text"
+        android:id="@+id/home_msg"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/buttonTwitter"
+        android:layout_toStartOf="@+id/buttonTwitter" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/btn_fb"
-        android:layout_marginTop="82dp"
-        android:id="@+id/buttonFB"
-        style="@android:style/Widget.Holo.Light.ImageButton"
-        android:background="@drawable/btn_fb"
-        android:layout_below="@+id/textClock"
-        android:layout_alignLeft="@+id/textClock"
-        android:layout_alignStart="@+id/textClock"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp" />
+        app:srcCompat="@drawable/btn_twitter"
+        android:id="@+id/buttonTwitter"
+        android:background="@drawable/btn_twitter"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_below="@+id/buttonCine"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/stat_sys_download"
+        android:id="@+id/buttonDownload"
+        android:background="@drawable/btn_neutre"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/buttonTwitter"
+        android:layout_toRightOf="@+id/buttonYoutube"
+        android:layout_toEndOf="@+id/buttonYoutube" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_slideshow"
+        android:id="@+id/buttonMaps"
+        android:elevation="0dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/btn_neutre"
+        android:layout_alignTop="@+id/buttonFB"
+        android:layout_toLeftOf="@+id/buttonTwitter"
+        android:layout_toStartOf="@+id/buttonTwitter" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_youtube"
+        android:id="@+id/buttonYoutube"
+        android:background="@drawable/btn_youtube"
+        android:layout_alignTop="@+id/buttonWeb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_web"
+        android:id="@+id/buttonWeb"
+        android:background="@drawable/btn_web"
+        android:layout_below="@+id/buttonInsta"
+        android:layout_toLeftOf="@+id/buttonYoutube"
+        android:layout_toStartOf="@+id/buttonYoutube"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
 
 </RelativeLayout>

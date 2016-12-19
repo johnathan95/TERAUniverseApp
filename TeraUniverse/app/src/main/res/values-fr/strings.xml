@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">TERA Universe</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="title_activity_settings">Réglages</string>
     <string name="title_activity_fb">TeraU - Média</string>
     <string name="action_settings">Réglages</string>
@@ -32,4 +32,22 @@
     <string name="save">Sauvegarder</string>
     <string name="saved">Sauvegardé</string>
     <string name="shared_preferences">Préférences Utilisateurs</string>
+    <string name="hello_blank_fragment">Bonjour blank fragment</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_description_social_recommendations">Recommandations pour les personnes à contacter en fonction de votre historique de messages</string>
+    <string name="pref_header_data_sync">Informations et Synchronisation</string>
+    <string name="pref_header_general">Général</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_ringtone_silent">Silence</string>
+    <string name="pref_title_add_friends_to_messages">Ajouter des amis aux messages</string>
+    <string name="pref_title_display_name">Afficher le nom</string>
+    <string name="pref_title_new_message_notifications">Notifications de nouveau message</string>
+    <string name="pref_title_ringtone">Sonnerie</string>
+    <string name="pref_title_social_recommendations"></string>
+    <string name="pref_title_sync_frequency">Fréquence de synchronisation</string>
+    <string name="pref_title_system_sync_settings">Réglages de synchronisation du système</string>
+    <string name="pref_title_vibrate">Vibrer</string>
+    <string name="home_msg_text">Bienvenue dans l\'application TERA Universe</string>
+    <string name="title_activity_cine">Scéances des films</string>
+    <string name="m_youtube">YouTube</string>
 </resources>

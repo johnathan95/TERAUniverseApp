@@ -40,7 +40,7 @@ public class FBActivity extends AppCompatActivity {
                 myToolbar.setTitle(R.string.m_instagram);
                 break;
             case MainActivity.TERA_WEB:
-                myWebView.loadUrl("https://www.tera-universe - wixsite.com");
+                myWebView.loadUrl("http://terauindustries.wixsite.com/tera-universe/home");
                 myToolbar.setLogo(R.drawable.btn_web);
                 myToolbar.setTitle(R.string.m_web);
                 break;
@@ -48,6 +48,11 @@ public class FBActivity extends AppCompatActivity {
                 myWebView.loadUrl("http://twitter.com/universe_tera");
                 myToolbar.setLogo(R.drawable.btn_twitter);
                 myToolbar.setTitle(R.string.m_twitter);
+                break;
+            case MainActivity.TERA_YT:
+                myWebView.loadUrl("http://www.youtube.com/channel/UCZ-lyEtYf1u5dQNijALIZ2g");
+                myToolbar.setLogo(R.drawable.btn_youtube);
+                myToolbar.setTitle(R.string.m_youtube);
                 break;
             default:
                 myWebView.loadUrl("null");

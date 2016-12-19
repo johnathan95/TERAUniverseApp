@@ -12,6 +12,22 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/m_movie" />
         <item
+            android:id="@+id/nav_insta"
+            android:icon="@drawable/btn_insta"
+            android:title="@string/m_instagram" />
+        <item
+            android:id="@+id/nav_twitter"
+            android:icon="@drawable/btn_twitter"
+            android:title="@string/m_twitter" />
+        <item
+            android:id="@+id/nav_web"
+            android:icon="@drawable/btn_web"
+            android:title="@string/m_web" />
+        <item
+            android:id="@+id/nav_youtube"
+            android:icon="@drawable/btn_youtube"
+            android:title="@string/m_youtube" />
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />

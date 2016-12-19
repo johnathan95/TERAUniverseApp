@@ -33,7 +33,7 @@ import com.example.johna.terauniverse.activity.SettingsActivity;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageButton btnFB,btnCine,btnDownload,btnInsta,btnMaps,btnWeb, btnTwitter;
+    private ImageButton btnFB,btnCine,btnDownload,btnInsta,btnMaps,btnWeb, btnTwitter, btnYoutube;
 
     public final static String EXTRA_LAUNCHES = "EXTRA_LAUNCHES";
     public final static String EXTRA_SIZE = "EXTRA_SIZE";
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     public final static int TERA_INSTA = 2;
     public final static int TERA_WEB = 3;
     public final static int TERA_TWITTER = 4;
+    public final static int TERA_YT = 5;
 
     private final static int EXIT_DIALOG = 1;
     private final static int ABOUT_DIALOG = 2;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity
         btnMaps = (ImageButton) findViewById(R.id.buttonMaps);
         btnWeb = (ImageButton) findViewById(R.id.buttonWeb);
         btnTwitter = (ImageButton) findViewById(R.id.buttonTwitter);
-
+        btnYoutube = (ImageButton) findViewById(R.id.buttonYoutube);
         btnDownload.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
@@ -128,6 +129,20 @@ public class MainActivity extends AppCompatActivity
 
                 Intent intent = new Intent(MainActivity.this, FBActivity.class);
                 intent.putExtra(EXTRA_TERA, TERA_WEB);
+                startActivity(intent);
+            }
+        });
+        btnYoutube.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, R.string.yt_tera, duration);
+                toast.show();
+
+                Intent intent = new Intent(MainActivity.this, FBActivity.class);
+                intent.putExtra(EXTRA_TERA, TERA_YT);
                 startActivity(intent);
             }
         });
@@ -307,13 +322,12 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_facebook) {
             Context context = getApplicationContext();
-            CharSequence text = "TERA Universe Facebook Page";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, R.string.facebook_tera, duration);
             toast.show();
 
             Intent intent = new Intent(MainActivity.this, FBActivity.class);
-            intent.putExtra(EXTRA_TERA, TERA_INSTA);
+            intent.putExtra(EXTRA_TERA, TERA_FB);
             startActivity(intent);
             System.out.println("TeraU fb page redirection ok");
         } else if (id == R.id.nav_movie) {

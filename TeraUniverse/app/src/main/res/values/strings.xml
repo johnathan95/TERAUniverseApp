@@ -109,4 +109,7 @@
     <string name="save">Save</string>
     <string name="saved">Saved</string>
     <string name="shared_preferences">Shared Preferences</string>
+    <string name="home_msg_text">Welcome to TERA Universe App</string>
+    <string name="yt_tera">TERA Universe YouTube channel</string>
+    <string name="m_youtube">YouTube</string>
 </resources>
