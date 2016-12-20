@@ -28,10 +28,6 @@
             android:icon="@drawable/btn_youtube"
             android:title="@string/m_youtube" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/m_settings" />
@@ -49,7 +45,7 @@
                 android:title="@string/save_sqlite" />
             <item
                 android:id="@+id/nav_help"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@android:drawable/ic_menu_help"
                 android:title="@string/help" />
         </menu>
     </item>

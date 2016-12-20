@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/btn_movie"
         android:id="@+id/buttonCine"
         android:background="@drawable/btn_movie"
-        android:layout_alignTop="@+id/buttonMaps"
+        android:layout_alignTop="@+id/buttonSave"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="27dp"
@@ -75,25 +75,13 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/stat_sys_download"
+        app:srcCompat="@drawable/btn_dwld"
         android:id="@+id/buttonDownload"
-        android:background="@drawable/btn_neutre"
+        android:background="@drawable/btn_dwld"
         android:layout_marginTop="12dp"
         android:layout_below="@+id/buttonTwitter"
         android:layout_toRightOf="@+id/buttonYoutube"
         android:layout_toEndOf="@+id/buttonYoutube" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_slideshow"
-        android:id="@+id/buttonMaps"
-        android:elevation="0dp"
-        android:layout_marginTop="33dp"
-        android:background="@drawable/btn_neutre"
-        android:layout_alignTop="@+id/buttonFB"
-        android:layout_toLeftOf="@+id/buttonTwitter"
-        android:layout_toStartOf="@+id/buttonTwitter" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -116,5 +104,17 @@
         android:layout_toStartOf="@+id/buttonYoutube"
         android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/btn_save"
+        android:id="@+id/buttonSave"
+        android:elevation="0dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/btn_save"
+        android:layout_alignTop="@+id/buttonFB"
+        android:layout_toLeftOf="@+id/buttonTwitter"
+        android:layout_toStartOf="@+id/buttonTwitter" />
 
 </RelativeLayout>

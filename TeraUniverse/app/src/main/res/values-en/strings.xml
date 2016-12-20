@@ -117,4 +117,5 @@
     <string name="save_sqlite">Save in SQLITE</string>
     <string name="moviesToWatch">Have to watch</string>
     <string name="movieList">List of movies to watch</string>
+    <string name="action_fb">Like our page</string>
 </resources>

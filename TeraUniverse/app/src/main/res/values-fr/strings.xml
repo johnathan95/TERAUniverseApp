@@ -27,7 +27,6 @@
     <string name="m_web">Site Web</string>
     <string name="m_settings">Réglages</string>
     <string name="download_pdf">Téléchargement du PDF</string>
-    <string name="type_note">Saisir une note</string>
     <string name="notes">Notes</string>
     <string name="save">Sauvegarder</string>
     <string name="saved">Sauvegardé</string>
@@ -43,21 +42,20 @@
     <string name="pref_title_display_name">Afficher le nom</string>
     <string name="pref_title_new_message_notifications">Notifications de nouveau message</string>
     <string name="pref_title_ringtone">Sonnerie</string>
-    <string name="pref_title_social_recommendations"></string>
+    <string name="pref_title_social_recommendations">Activer les recommandations sociales</string>
     <string name="pref_title_sync_frequency">Fréquence de synchronisation</string>
     <string name="pref_title_system_sync_settings">Réglages de synchronisation du système</string>
     <string name="pref_title_vibrate">Vibrer</string>
     <string name="home_msg_text">Bienvenue dans l\'application TERA Universe</string>
-    <string name="title_activity_cine">Scéances des films</string>
     <string name="m_youtube">YouTube</string>
     <string name="movie_name">Nom du film</string>
     <string name="add">Ajouter</string>
-    <string name="view_movies">Voir les films</string>
     <string name="empty_field">Champs requis</string>
     <string name="data_inserted">Donnée insérée </string>
     <string name="error_inserting">Erreur lors de l\'insertion</string>
     <string name="empty_list">Liste vide</string>
-    <string name="save_sqlite">Sauvegarde SQLITE</string>
-    <string name="moviesToWatch">A regarder</string>
-    <string name="movieList">Liste des films à regarder</string>
+
+    <string name="save_sqlite">Sauvegarder dans SQLITE</string>
+    <string name="yt_tera">Chaîne Youtube de TERA Universe</string>
+    <string name="action_fb">Aimez notre page</string>
 </resources>
