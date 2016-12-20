@@ -50,4 +50,14 @@
     <string name="home_msg_text">Bienvenue dans l\'application TERA Universe</string>
     <string name="title_activity_cine">Scéances des films</string>
     <string name="m_youtube">YouTube</string>
+    <string name="movie_name">Nom du film</string>
+    <string name="add">Ajouter</string>
+    <string name="view_movies">Voir les films</string>
+    <string name="empty_field">Champs requis</string>
+    <string name="data_inserted">Donnée insérée </string>
+    <string name="error_inserting">Erreur lors de l\'insertion</string>
+    <string name="empty_list">Liste vide</string>
+    <string name="save_sqlite">Sauvegarde SQLITE</string>
+    <string name="moviesToWatch">A regarder</string>
+    <string name="movieList">Liste des films à regarder</string>
 </resources>

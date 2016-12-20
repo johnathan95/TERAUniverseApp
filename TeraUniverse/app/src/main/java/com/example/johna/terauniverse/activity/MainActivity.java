@@ -349,6 +349,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_help) {
 
+        } else if (id == R.id.save_sqlite){
+            Intent intent = new Intent(MainActivity.this, MovieToWatch.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

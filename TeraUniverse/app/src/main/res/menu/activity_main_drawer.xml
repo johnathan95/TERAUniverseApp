@@ -44,6 +44,10 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/shared_preferences" />
             <item
+                android:id="@+id/save_sqlite"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/save_sqlite" />
+            <item
                 android:id="@+id/nav_help"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/help" />

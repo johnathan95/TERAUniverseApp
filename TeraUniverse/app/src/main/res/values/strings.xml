@@ -112,4 +112,14 @@
     <string name="home_msg_text">Welcome to TERA Universe App</string>
     <string name="yt_tera">TERA Universe YouTube channel</string>
     <string name="m_youtube">YouTube</string>
+    <string name="movie_name">Movie name</string>
+    <string name="add">Add</string>
+    <string name="view_movies">View movies</string>
+    <string name="empty_field">The field can\'t be empty</string>
+    <string name="data_inserted">Data inserted in SQLITE</string>
+    <string name="error_inserting">Error while data inserting</string>
+    <string name="empty_list">Empty list</string>
+    <string name="save_sqlite">Save in SQLITE</string>
+    <string name="moviesToWatch">Have to watch</string>
+    <string name="movieList">List of movies to watch</string>
 </resources>
