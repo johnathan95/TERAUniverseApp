@@ -3,6 +3,7 @@
     package="com.example.johna.terauniverse">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -63,17 +64,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.MovieToWatch" android:label="@string/moviesToWatch">
+        <activity
+            android:name=".activity.MovieToWatch"
+            android:label="@string/moviesToWatch">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.MovieListActivity"
+        <activity
+            android:name=".activity.MovieListActivity"
             android:label="@string/movieList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.johna.terauniverse.activity.MovieToWatch" />
         </activity>
+        <activity android:name=".activity.MakingCallActivity"></activity>
     </application>
 
 </manifest>

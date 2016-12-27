@@ -58,4 +58,6 @@
     <string name="save_sqlite">Sauvegarder dans SQLITE</string>
     <string name="yt_tera">Chaîne Youtube de TERA Universe</string>
     <string name="action_fb">Aimez notre page</string>
+    <string name="make_a_call">Passer un appel</string>
+    <string name="call_123456789">Appeller 123456789</string>
 </resources>

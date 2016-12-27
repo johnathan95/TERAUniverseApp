@@ -118,4 +118,6 @@
     <string name="moviesToWatch">Have to watch</string>
     <string name="movieList">List of movies to watch</string>
     <string name="action_fb">Like our page</string>
+    <string name="make_a_call">Make a call</string>
+    <string name="call_123456789">Call 123456789</string>
 </resources>

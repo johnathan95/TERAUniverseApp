@@ -33,7 +33,7 @@
             android:title="@string/m_settings" />
     </group>
 
-    <item android:title="Sauvegarde">
+    <item android:title="Bonus">
         <menu>
             <item
                 android:id="@+id/shared_pref"
@@ -43,6 +43,10 @@
                 android:id="@+id/save_sqlite"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/save_sqlite" />
+            <item
+                android:id="@+id/make_a_call"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/make_a_call" />
             <item
                 android:id="@+id/nav_help"
                 android:icon="@android:drawable/ic_menu_help"
